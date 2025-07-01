@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --dark-main: #1a1a1a;
+  --gray-dark: #707070;
+  --gray-light: #a0a0a0;
+  --light-main: #e5e5e5;
+  --font-sans: "IBM Plex Sans";
+  --font-serif: "Newsreader";
+  --font-mono: "DM Mono";
+}
+
+* {
+  background-color: var(--dark-main);
+}
