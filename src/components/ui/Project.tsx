@@ -3,7 +3,7 @@ import Arrow from "./Arrow";
 
 function Project({ project }: { project: project }) {
   return (
-    <div className="flex flex-col gap-[20px] w-[150px]">
+    <div className="flex flex-col gap-[20px] w-full">
       <div className="flex gap-2 hover:text-(--gray-light) hover:cursor-pointer">
         <a href={project.link} className="underline underline-offset-5">
           {project.name}
@@ -11,6 +11,13 @@ function Project({ project }: { project: project }) {
         <Arrow />
       </div>
       <p className="text-(--gray-dark)">{project.description}</p>
+      <div className="flex flex-wrap gap-2">
+        {project.techStack.map((t) => (
+          <div className="text-sm text-(--dark-main) bg-(--gray-dark) rounded-2xl py-1 px-2">
+            {t}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
