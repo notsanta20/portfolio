@@ -1,6 +1,7 @@
 import Project from "../../components/ui/Project";
 import Link from "../../components/ui/Link";
-import type { project, link } from "../../types/types";
+import type { project, link, stack } from "../../types/types";
+import Stack from "../../components/ui/Stack";
 
 function Home() {
   const allLinks: Array<link> = [
@@ -19,21 +20,78 @@ function Home() {
   ];
   const allProjects: Array<project> = [
     {
-      name: "Local Bank",
+      name: "Portfolio App",
       link: "",
-      description: "Terminal based bank app built with java.",
+      description: "Portfolio app",
+      techStack: ["React", "TailwindCSS"],
     },
     {
       name: "Yabble",
       link: "",
       description:
         "Social media app built with react, node.js, PostgreSQL, socket.io & jwt auth.",
+      techStack: [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Socket.io",
+        "JWT",
+        "Cloudinary",
+        "TailwindCSS",
+      ],
     },
     {
       name: "Chatterbox",
       link: "",
+      description: "Messaging app",
+      techStack: ["React", "Node.js", "PostgreSQL", "JWT", "TailwindCSS"],
+    },
+    {
+      name: "Sky safe",
+      link: "",
       description:
-        "Messaging app built with react, node.js, PostgreSQL & jwt auth.",
+        "File uploader app built with node.js, ejs, PostgreSQL & jwt auth and Supabase.",
+      techStack: [
+        "Node.js",
+        "PostgreSQL",
+        "EJS",
+        "JWT",
+        "Supabase",
+        "TailwindCSS",
+      ],
+    },
+  ];
+
+  const techStack: Array<stack> = [
+    {
+      title: "Language",
+      stack: [
+        "Python",
+        "Java",
+        "JavaScript",
+        "PostgreSQL",
+        "MongoDB",
+        "HTML/CSS",
+      ],
+    },
+    {
+      title: "Framework",
+      stack: [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Express",
+        "TailwindCSS",
+        "Prisma ORM",
+      ],
+    },
+    {
+      title: "Tools",
+      stack: ["Git", "VS Code", "IntelliJ", "Pycharm"],
+    },
+    {
+      title: "Libraries",
+      stack: ["JWT", "Socket.io"],
     },
   ];
 
@@ -53,7 +111,7 @@ function Home() {
             </h2>
             <h2>
               If I'm not coding, I'm probably tinkering my homelab, gaming, or
-              sketching out ideas for my next side project or startup.
+              thinking about my next side project or startup.
             </h2>
           </section>
         </header>
@@ -62,7 +120,7 @@ function Home() {
             <h3 className="font-(family-name:--font-mono) text-(--gray-dark)">
               # Projects
             </h3>
-            <section className="mt-[30px] flex gap-5 overflow-auto">
+            <section className="mt-[30px] flex flex-col gap-5">
               {allProjects.map((project) => (
                 <Project project={project} />
               ))}
@@ -70,15 +128,12 @@ function Home() {
           </section>
           <section>
             <h3 className="font-(family-name:--font-mono) text-(--gray-dark)">
-              # Now
+              # TechStack
             </h3>
-            <section>
-              <div className="flex flex-col gap-2 mt-[30px]">
-                <h3>Local Bank</h3>
-                <p className="text-(--gray-dark)">
-                  Terminal based bank app in java. WIP.
-                </p>
-              </div>
+            <section className="flex flex-col gap-3 mt-[30px]">
+              {techStack.map((stack) => (
+                <Stack stack={stack} />
+              ))}
             </section>
           </section>
           <section>
