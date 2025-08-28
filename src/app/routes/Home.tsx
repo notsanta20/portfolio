@@ -21,7 +21,7 @@ function Home() {
   const allProjects: Array<project> = [
     {
       name: "Portfolio App",
-      link: "",
+      link: "santhosh.dev",
       description: "Portfolio app",
       techStack: ["React", "TailwindCSS"],
     },
