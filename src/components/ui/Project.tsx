@@ -5,7 +5,11 @@ function Project({ project }: { project: project }) {
   return (
     <div className="flex flex-col gap-[20px] w-full">
       <div className="flex gap-2 hover:text-(--gray-light) hover:cursor-pointer">
-        <a href={project.link} className="underline underline-offset-5">
+        <a
+          href={project.link}
+          className="underline underline-offset-5"
+          target="blank"
+        >
           {project.name}
         </a>
         <Arrow />
