@@ -7,15 +7,15 @@ function Home() {
   const allLinks: Array<link> = [
     {
       name: "email",
-      link: "",
+      link: "s@santhosh.dev",
     },
     {
       name: "linkedin",
-      link: "",
+      link: "https://www.linkedin.com/in/santa-s/",
     },
     {
       name: "github",
-      link: "",
+      link: "https://github.com/notsanta20",
     },
   ];
   const allProjects: Array<project> = [
@@ -68,7 +68,7 @@ function Home() {
       stack: [
         "Python",
         "Java",
-        "JavaScript",
+        "JavaScript/TypeScript",
         "PostgreSQL",
         "MongoDB",
         "HTML/CSS",
@@ -79,7 +79,8 @@ function Home() {
       stack: [
         "React",
         "Node.js",
-        "TypeScript",
+        "Flask",
+        "FastAPI",
         "Express",
         "TailwindCSS",
         "Prisma ORM",
@@ -88,10 +89,6 @@ function Home() {
     {
       title: "Tools",
       stack: ["Git", "VS Code", "IntelliJ", "Pycharm"],
-    },
-    {
-      title: "Libraries",
-      stack: ["JWT", "Socket.io"],
     },
   ];
 
