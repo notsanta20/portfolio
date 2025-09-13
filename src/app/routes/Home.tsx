@@ -1,4 +1,5 @@
 import Project from "../../components/ui/Project";
+import SideProject from "../../components/ui/SideProject";
 import Link from "../../components/ui/Link";
 import type { project, link, stack } from "../../types/types";
 import Stack from "../../components/ui/Stack";
@@ -18,6 +19,35 @@ function Home() {
       link: "https://github.com/notsanta20",
     },
   ];
+  const techStack: Array<stack> = [
+    {
+      title: "Language",
+      stack: [
+        "Python",
+        "Java",
+        "JavaScript/TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "HTML/CSS",
+      ],
+    },
+    {
+      title: "Framework",
+      stack: [
+        "React",
+        "Node.js",
+        "Flask",
+        "FastAPI",
+        "Express",
+        "TailwindCSS",
+        "Prisma ORM",
+      ],
+    },
+    {
+      title: "Tools and Technology",
+      stack: ["Git", "VS Code", "IntelliJ", "Pycharm"],
+    },
+  ];
   const allProjects: Array<project> = [
     {
       name: "Portfolio App",
@@ -27,7 +57,7 @@ function Home() {
     },
     {
       name: "Yabble",
-      link: "",
+      link: "https://yabble.santhosh.dev/",
       description:
         "Social media app built with react, node.js, PostgreSQL, socket.io & jwt auth.",
       techStack: [
@@ -61,43 +91,56 @@ function Home() {
       ],
     },
   ];
-
-  const techStack: Array<stack> = [
+  const sideProjects: Array<project> = [
     {
-      title: "Language",
-      stack: [
-        "Python",
-        "Java",
-        "JavaScript/TypeScript",
-        "PostgreSQL",
-        "MongoDB",
-        "HTML/CSS",
-      ],
+      name: "Portfolio App",
+      link: "santhosh.dev",
+      description: "portfolio app",
+      techStack: ["React", "TailwindCSS"],
     },
     {
-      title: "Framework",
-      stack: [
+      name: "Yabble",
+      link: "https://yabble.santhosh.dev/",
+      description:
+        "social media app built with react, node.js, PostgreSQL, socket.io & jwt auth.",
+      techStack: [
         "React",
         "Node.js",
-        "Flask",
-        "FastAPI",
-        "Express",
+        "PostgreSQL",
+        "Socket.io",
+        "JWT",
+        "Cloudinary",
         "TailwindCSS",
-        "Prisma ORM",
       ],
     },
     {
-      title: "Tools",
-      stack: ["Git", "VS Code", "IntelliJ", "Pycharm"],
+      name: "Chatterbox",
+      link: "",
+      description: "messaging app",
+      techStack: ["React", "Node.js", "PostgreSQL", "JWT", "TailwindCSS"],
+    },
+    {
+      name: "Sky safe",
+      link: "",
+      description:
+        "file uploader app built with node.js, ejs, PostgreSQL & jwt auth and Supabase.",
+      techStack: [
+        "Node.js",
+        "PostgreSQL",
+        "EJS",
+        "JWT",
+        "Supabase",
+        "TailwindCSS",
+      ],
     },
   ];
 
   return (
-    <div className="flex flex-col gap-15 h-dvh md:h-full w-full mt-[50px] md:mt-[100px] text-(--light-main)">
-      <section className="md:w-[600px] md:self-center px-5 min-w-0 flex-auto flex flex-col gap-15">
+    <div className="flex flex-col gap-15 h-dvh md:h-full w-full mt-[50px] md:mt-[100px] text-white">
+      <section className="md:w-[600px] md:self-center px-5 min-w-0 flex-auto flex flex-col gap-10">
         <header>
           <h1 className="font-(family-name:--font-mono) text-lg">Santhosh</h1>
-          <section className="mt-[40px] flex flex-col gap-[40px]">
+          <section className="mt-[20px] flex flex-col gap-[40px]">
             <h2>
               <span className="font-(family-name:--font-serif) italic">
                 3D artist
@@ -112,33 +155,43 @@ function Home() {
             </h2>
           </section>
         </header>
-        <main className="flex flex-col gap-15">
+        <main className="flex flex-col gap-10">
           <section>
-            <h3 className="font-(family-name:--font-mono) text-(--gray-dark)">
-              # Projects
+            <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
+              #Projects
             </h3>
-            <section className="mt-[30px] flex flex-col gap-5">
+            <section className="mt-[10px] flex flex-col gap-5">
               {allProjects.map((project) => (
                 <Project project={project} />
               ))}
             </section>
           </section>
           <section>
-            <h3 className="font-(family-name:--font-mono) text-(--gray-dark)">
-              # TechStack
+            <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
+              #Side Projects/Apps
             </h3>
-            <section className="flex flex-col gap-3 mt-[30px]">
+            <section className="mt-[10px] flex flex-col gap-2">
+              {sideProjects.map((project) => (
+                <SideProject sideProject={project} />
+              ))}
+            </section>
+          </section>
+          <section>
+            <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
+              #TechStack
+            </h3>
+            <section className="flex flex-col gap-3 mt-[10px]">
               {techStack.map((stack) => (
                 <Stack stack={stack} />
               ))}
             </section>
           </section>
           <section>
-            <h3 className="font-(family-name:--font-mono) text-(--gray-dark)">
-              # Connect
+            <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
+              #Connect
             </h3>
             <section>
-              <div className="flex gap-2 mt-[30px]">
+              <div className="flex gap-2 mt-[10px]">
                 {allLinks.map((link) => (
                   <Link link={link} />
                 ))}
