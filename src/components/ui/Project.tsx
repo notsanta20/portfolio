@@ -1,5 +1,6 @@
 import type { project } from "../../types/types";
 import Arrow from "./Arrow";
+import TextTag from "./TextTag";
 
 function Project({ project }: { project: project }) {
   return (
@@ -14,12 +15,10 @@ function Project({ project }: { project: project }) {
         </a>
         <Arrow />
       </div>
-      <p className="text-(--gray-dark)">{project.description}</p>
+      <p className="text-(--gray-light)">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.techStack.map((t) => (
-          <div className="text-sm text-(--dark-main) bg-(--gray-dark) rounded-2xl py-1 px-2">
-            {t}
-          </div>
+          <TextTag text={t} />
         ))}
       </div>
     </div>
