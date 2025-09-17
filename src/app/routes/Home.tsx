@@ -85,7 +85,7 @@ function Home() {
     },
     {
       name: "Tools_",
-      link: "tools.santhosh.dev",
+      link: "https://tools.santhosh.dev/",
       description: "Common tools app",
       techStack: ["React", "TailwindCSS"],
     },
