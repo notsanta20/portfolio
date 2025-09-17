@@ -1,5 +1,4 @@
 import Project from "../../components/ui/Project";
-import SideProject from "../../components/ui/SideProject";
 import Link from "../../components/ui/Link";
 import type { project, link, stack } from "../../types/types";
 import Stack from "../../components/ui/Stack";
@@ -50,12 +49,6 @@ function Home() {
   ];
   const allProjects: Array<project> = [
     {
-      name: "Portfolio App",
-      link: "santhosh.dev",
-      description: "Portfolio app",
-      techStack: ["React", "TailwindCSS"],
-    },
-    {
       name: "Yabble",
       link: "https://yabble.santhosh.dev/",
       description:
@@ -72,13 +65,13 @@ function Home() {
     },
     {
       name: "Chatterbox",
-      link: "",
+      link: "https://chatterbox-henna.vercel.app/",
       description: "Messaging app",
       techStack: ["React", "Node.js", "PostgreSQL", "JWT", "TailwindCSS"],
     },
     {
       name: "Sky safe",
-      link: "",
+      link: "https://file-uploader-jcen.onrender.com",
       description:
         "File uploader app built with node.js, ejs, PostgreSQL & jwt auth and Supabase.",
       techStack: [
@@ -90,53 +83,16 @@ function Home() {
         "TailwindCSS",
       ],
     },
-  ];
-  const sideProjects: Array<project> = [
     {
-      name: "Portfolio App",
-      link: "santhosh.dev",
-      description: "portfolio app",
+      name: "Tools_",
+      link: "tools.santhosh.dev",
+      description: "Common tools app",
       techStack: ["React", "TailwindCSS"],
-    },
-    {
-      name: "Yabble",
-      link: "https://yabble.santhosh.dev/",
-      description:
-        "social media app built with react, node.js, PostgreSQL, socket.io & jwt auth.",
-      techStack: [
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Socket.io",
-        "JWT",
-        "Cloudinary",
-        "TailwindCSS",
-      ],
-    },
-    {
-      name: "Chatterbox",
-      link: "",
-      description: "messaging app",
-      techStack: ["React", "Node.js", "PostgreSQL", "JWT", "TailwindCSS"],
-    },
-    {
-      name: "Sky safe",
-      link: "",
-      description:
-        "file uploader app built with node.js, ejs, PostgreSQL & jwt auth and Supabase.",
-      techStack: [
-        "Node.js",
-        "PostgreSQL",
-        "EJS",
-        "JWT",
-        "Supabase",
-        "TailwindCSS",
-      ],
     },
   ];
 
   return (
-    <div className="flex flex-col gap-15 h-dvh md:h-full w-full mt-[50px] md:mt-[100px] text-white">
+    <div className="flex flex-col gap-15 h-dvh md:h-full w-full mt-[50px] md:mt-[100px] text-white cursor-default">
       <section className="md:w-[600px] md:self-center px-5 min-w-0 flex-auto flex flex-col gap-10">
         <header>
           <h1 className="font-(family-name:--font-mono) text-lg">Santhosh</h1>
@@ -158,42 +114,32 @@ function Home() {
         <main className="flex flex-col gap-10">
           <section>
             <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
-              #Projects
+              # Projects
             </h3>
-            <section className="mt-[10px] flex flex-col gap-5">
+            <section className="mt-[10px] flex flex-col gap-6">
               {allProjects.map((project) => (
-                <Project project={project} />
+                <Project project={project} key={project.name} />
               ))}
             </section>
           </section>
           <section>
             <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
-              #Side Projects/Apps
-            </h3>
-            <section className="mt-[10px] flex flex-col gap-2">
-              {sideProjects.map((project) => (
-                <SideProject sideProject={project} />
-              ))}
-            </section>
-          </section>
-          <section>
-            <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
-              #TechStack
+              # TechStack
             </h3>
             <section className="flex flex-col gap-3 mt-[10px]">
               {techStack.map((stack) => (
-                <Stack stack={stack} />
+                <Stack techStack={stack} key={stack.title} />
               ))}
             </section>
           </section>
           <section>
             <h3 className="font-(family-name:--font-mono) text-(--gray-light)">
-              #Connect
+              # Connect
             </h3>
             <section>
               <div className="flex gap-2 mt-[10px]">
                 {allLinks.map((link) => (
-                  <Link link={link} />
+                  <Link link={link} key={link.name} />
                 ))}
               </div>
             </section>
@@ -210,8 +156,8 @@ function Home() {
                 width={"15"}
                 height={"15"}
               />
-              <h4 className="text-(--gray-dark) font-(family-name:--font-mono) text-sm p-2">
-                chennai, india
+              <h4 className="text-(--gray-light) font-(family-name:--font-mono) text-xs p-2">
+                CHENNAI, INDIA
               </h4>
             </div>
           </div>
