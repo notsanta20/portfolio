@@ -4,8 +4,8 @@ import TextTag from "./TextTag";
 
 function Project({ project }: { project: project }) {
   return (
-    <div className="flex flex-col gap-[20px] w-full">
-      <div className="flex gap-2 hover:text-(--gray-light) hover:cursor-pointer">
+    <div className="flex flex-col items-start gap-[10px] w-full">
+      <div className="flex gap-2 items-center hover:text-(--gray-light) hover:cursor-pointer project-link">
         <a
           href={project.link}
           className="underline underline-offset-5"
