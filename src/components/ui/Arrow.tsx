@@ -5,6 +5,7 @@ function Arrow() {
       alt="link-arrow"
       width={"15"}
       height={"15"}
+      className="arrow"
     />
   );
 }

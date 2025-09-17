@@ -11,3 +11,12 @@
 html {
   background-color: black;
 }
+
+.arrow {
+  transform: translateY(2px);
+  transform-origin: 45%;
+}
+
+.project-link:hover .arrow {
+  transform: translateX(5px);
+}
