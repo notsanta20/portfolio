@@ -22,37 +22,60 @@ function Home() {
     {
       title: "Language",
       stack: [
-        "Python",
         "Java",
         "JavaScript/TypeScript",
+        "Python",
         "PostgreSQL",
-        "MongoDB",
         "HTML/CSS",
       ],
     },
     {
-      title: "Framework",
+      title: "Frameworks & Libraries",
       stack: [
+        "Spring Boot",
         "React",
         "Node.js",
-        "Flask",
-        "FastAPI",
         "Express",
+        "FastAPI",
         "TailwindCSS",
         "Prisma ORM",
+        "JUnit",
       ],
     },
     {
-      title: "Tools and Technology",
-      stack: ["Git", "VS Code", "IntelliJ", "Pycharm"],
+      title: "Tools & Patterns",
+      stack: [
+        "Docker",
+        "Git",
+        "VS Code",
+        "IntelliJ",
+        "Pycharm",
+        "OOP",
+        "REST API Design",
+        "Microservices",
+      ],
     },
   ];
   const allProjects: Array<project> = [
     {
+      name: "Library Management System",
+      link: "https://github.com/notsanta20/lib_mngmnt_system_backend",
+      description:
+        "Designed and deployed scalable, Docker-based microservices featuring CRUD APIs, JWT security, Spring Data JPA workflows, error handling, pagination, and JUnit testing for efficient and reliable system performance.",
+      techStack: [
+        "Java",
+        "Spring boot",
+        "Microservices",
+        "PostgreSQL",
+        "Docker",
+        "JWT",
+      ],
+    },
+    {
       name: "Yabble",
       link: "https://yabble.santhosh.dev/",
       description:
-        "Social media app built with react, node.js, PostgreSQL, socket.io & jwt auth.",
+        "Created a real-time social media platform with live chat, interactive posts, secure JWT auth, Cloudinary storage, full engagement features, and a responsive mobile-first design.",
       techStack: [
         "React",
         "Node.js",
@@ -64,16 +87,10 @@ function Home() {
       ],
     },
     {
-      name: "Chatterbox",
-      link: "https://chatterbox-henna.vercel.app/",
-      description: "Messaging app",
-      techStack: ["React", "Node.js", "PostgreSQL", "JWT", "TailwindCSS"],
-    },
-    {
       name: "Sky safe",
       link: "https://file-uploader-jcen.onrender.com",
       description:
-        "File uploader app built with node.js, ejs, PostgreSQL & jwt auth and Supabase.",
+        "Created a secure cloud storage app using Node.js with Supabase, Passport.js, advanced file operations, expiring share links, and robust RESTful APIs for reliable file management.",
       techStack: [
         "Node.js",
         "PostgreSQL",
