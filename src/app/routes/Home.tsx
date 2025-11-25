@@ -87,6 +87,13 @@ function Home() {
       ],
     },
     {
+      name: "DoomScroll Detector",
+      link: "https://github.com/notsanta20/doomscroll_detector",
+      description:
+        "Google chrome extension that tracks your scrolling habits on addictive websites and alerts you",
+      techStack: ["Javascript", "HTML/CSS", "Manifest3"],
+    },
+    {
       name: "Sky safe",
       link: "https://file-uploader-jcen.onrender.com",
       description:
