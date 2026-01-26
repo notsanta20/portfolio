@@ -21,16 +21,10 @@ function Home() {
   const techStack: Array<stack> = [
     {
       title: "Language",
-      stack: [
-        "Java",
-        "JavaScript/TypeScript",
-        "Python",
-        "PostgreSQL",
-        "HTML/CSS",
-      ],
+      stack: ["Java", "JavaScript", "TypeScript", "Python", "HTML", "CSS"],
     },
     {
-      title: "Frameworks & Libraries",
+      title: "Backend and Frameworks",
       stack: [
         "Spring Boot",
         "React",
@@ -39,24 +33,36 @@ function Home() {
         "FastAPI",
         "TailwindCSS",
         "Prisma ORM",
-        "JUnit",
-      ],
-    },
-    {
-      title: "Tools & Patterns",
-      stack: [
-        "Docker",
-        "Git",
-        "VS Code",
-        "IntelliJ",
-        "Pycharm",
-        "OOP",
         "REST API Design",
         "Microservices",
       ],
     },
+    {
+      title: "Databases and Messaging",
+      stack: ["PostgreSQL", "MongoDB", "Apache Kafka"],
+    },
+    {
+      title: "Tools & Devops",
+      stack: ["Docker", "Git", "JUnit", "VS Code", "IntelliJ", "Pycharm"],
+    },
   ];
   const allProjects: Array<project> = [
+    {
+      name: "Zenith pay",
+      link: "https://github.com/notsanta20/zenith-pay-app",
+      description:
+        "Developed and built a banking platform using Spring Boot microservices, supporting secure user onboarding, account management, transaction processing, notifications, and logging with scalable service isolation.",
+      techStack: [
+        "Java",
+        "Spring boot",
+        "Apache Kafka",
+        "Microservices",
+        "PostgreSQL",
+        "MogoDB",
+        "Docker",
+        "JWT",
+      ],
+    },
     {
       name: "Library Management System",
       link: "https://github.com/notsanta20/lib_mngmnt_system_backend",
