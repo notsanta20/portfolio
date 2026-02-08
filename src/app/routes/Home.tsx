@@ -128,10 +128,7 @@ function Home() {
           <h1 className="font-(family-name:--font-mono) text-lg">Santhosh</h1>
           <section className="mt-[20px] flex flex-col gap-[40px]">
             <h2>
-              <span className="font-(family-name:--font-serif) italic">
-                3D artist
-              </span>{" "}
-              turned software developer with a passion for building things and
+              software developer with a passion for building things and
               exploring new technologies.My journey from visual design to code
               has been driven by curiosity and a deep love for problem-solving.
             </h2>
